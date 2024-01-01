@@ -1,0 +1,33 @@
+.register{
+    background-color: black;
+    height: 150vh;
+    position: relative;
+    padding: 50px 0px;
+    display: flex;
+    .image_wrapper{
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+
+// <div
+// style={{
+//   minHeight: "150vh",
+//   position: "absolute",
+//   backgroundImage: `url(https://ichef.bbci.co.uk/images/ic/704xn/p0gpmw0t.png)`,
+//   backgroundRepeat: "no-repeat",
+//   zIndex: "9",
+//   top: "0",
+//   left: "47%",
+//   /* width: fit-content; */
+//   width: "53%",
+// }}
+// >
+// </div>

@@ -1,0 +1,87 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "user1",
+        "fullName": "User One",
+        "profileImg": "user1.jpg",
+        "email": "user1@example.com",
+        "password": "hashed_password",
+        "isAdmin": false
+      },
+      {
+        "id": 2,
+        "username": "user2",
+        "fullName": "User Two",
+        "profileImg": "user2.jpg",
+        "email": "user2@example.com",
+        "password": "hashed_password",
+        "isAdmin": false
+      }
+    ],
+    "publishers": [
+      {
+        "id": 1,
+        "username": "publisher1",
+        "password": "hashed_password",
+        "email": "publisher1@example.com",
+        "backgroundImg": "background1.jpg",
+        "profileImg": "profile1.jpg",
+        "name": "Publisher One",
+        "description": "Description of Publisher One",
+        "joinedDate": "2023-01-01"
+      },
+      {
+        "id": 2,
+        "username": "publisher2",
+        "password": "hashed_password",
+        "email": "publisher2@example.com",
+        "backgroundImg": "background2.jpg",
+        "profileImg": "profile2.jpg",
+        "name": "Publisher Two",
+        "description": "Description of Publisher Two",
+        "joinedDate": "2023-02-01"
+      }
+    ],
+    "subscriptions": [
+      {
+        "id": 1,
+        "userId": 1,
+        "publisherId": 1
+      },
+      {
+        "id": 2,
+        "userId": 1,
+        "publisherId": 2
+      }
+    ],
+    "news": [
+      {
+        "id": 1,
+        "title": "News Title 1",
+        "createdAt": "2023-03-01",
+        "linkURL": "https://example.com/news1",
+        "thumbnailImg": "news1_thumbnail.jpg",
+        "newsBody": "Content of News 1"
+      },
+      {
+        "id": 2,
+        "title": "News Title 2",
+        "createdAt": "2023-03-02",
+        "linkURL": "https://example.com/news2",
+        "thumbnailImg": "news2_thumbnail.jpg",
+        "newsBody": "Content of News 2"
+      }
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "Tag1"
+      },
+      {
+        "id": 2,
+        "name": "Tag2"
+      }
+    ]
+  }
+  

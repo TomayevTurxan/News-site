@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
 import { Col, Row } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import userSlice, { setUser } from "../../reduxTol0kit/userSlice/userSlice";
+import  { setUser } from "../../reduxTol0kit/userSlice/userSlice";
+import { setPublisher } from "../../reduxTol0kit/publisherSlice/publisherSlice";
 
 const Navbar = () => {
-  const dispatch = useDispatch({userSlice});
+  const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
-console.log("tapildi",user);
+  const publisher = useSelector((state) => state.publisher.publisher);
+  console.log("publisher",publisher);
   return (
     <div className={style.containerNavbar}>
       <Row className={style.navbar}>
@@ -60,7 +62,7 @@ console.log("tapildi",user);
                 justifyContent: "flex-end"
               }}
             >
-               {user ? (
+               {user || publisher ? (
                 <>
                   <li
                     style={{
@@ -74,11 +76,14 @@ console.log("tapildi",user);
                         color: "white",
                       }}
                     >
-                      <Link to="/user/UserPage">
-                      {`Welcome, ${user.username}!`}
-                      </Link>
+                     <Link to="/user/UserPage">
+                      Welcome, {user ? user.username : ""} {publisher ? publisher.publisherName : ""}!
+                    </Link>
                     </span>
-                    <Link to="#" onClick={() => dispatch(setUser(null))}>
+                    <Link to="#" onClick={()=>{
+                     dispatch(setUser(null));
+                     dispatch(setPublisher(null));
+                    }}>
                       Log Out
                     </Link>
                   </li>

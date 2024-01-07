@@ -18,7 +18,7 @@ import UserRegister from "./UserRegister";
 import PublisherRegister from "./PublisherRegister";
 const defaultTheme = createTheme();
 
-export default function Login() {
+export default function Register() {
   console.log("parent render olundu");
 
   const dispatch = useDispatch(userSlice);
@@ -147,7 +147,6 @@ export default function Login() {
                     {error}
                   </Typography>
                 )}
-              
               </Box>
             </Box>
           </Container>

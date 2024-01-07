@@ -120,7 +120,8 @@ const UserRegister = () => {
         <TextField
           id="password"
           name="password"
-          label="password"
+          label="Password"
+          type="password"
           fullWidth
           margin="normal"
           variant="outlined"
